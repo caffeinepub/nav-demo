@@ -1,0 +1,96 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Responsive Header with 3-Level Navigation Menu",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Create a full-width responsive header component spanning 100% viewport width with consistent height and padding",
+      "acceptanceCriteria": [
+        "Header stretches to 100% viewport width on all screen sizes",
+        "Header maintains consistent height and does not overflow horizontally",
+        "Header is visually distinct with a background color/style that contrasts with page content"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/Header.tsx",
+          "operation": "create",
+          "description": "Create a responsive header component with full viewport width, consistent height across breakpoints, and distinct background styling. Apply Tailwind classes for width (w-full), padding (px-4 md:px-6 lg:px-8), fixed height, and a visually distinct background color that contrasts with page content. Ensure the header does not overflow horizontally at any breakpoint."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wire the new Header component into the main App component at the top of the layout, above all other page content. Import and render <Header /> as the first child in the root container to ensure it appears at the top of every view."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Implement a 3-level desktop navigation menu with Level 1 top-level links, Level 2 dropdown on hover, and Level 3 flyout/nested sub-menu",
+      "acceptanceCriteria": [
+        "At least 3 Level 1 navigation items are visible in the header on desktop",
+        "Hovering a Level 1 item opens a dropdown showing Level 2 items",
+        "Hovering a Level 2 item opens a nested Level 3 sub-menu (flyout or indented)",
+        "Menus close when the user moves the cursor away",
+        "All three levels are keyboard-accessible (Tab + Enter/Space/Escape)"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/Header.tsx",
+          "operation": "modify",
+          "description": "Add a horizontal desktop navigation bar inside the Header component visible only on desktop breakpoints (hidden on mobile/tablet). Hardcode demo menu data with at least 3 Level 1 items, each containing multiple Level 2 items, and some Level 2 items containing Level 3 sub-items. Implement hover-based dropdown logic: hovering a Level 1 item reveals a Level 2 dropdown; hovering a Level 2 item reveals a Level 3 flyout or nested sub-menu. Use React state to track open menus and close them when the cursor moves away. Ensure keyboard navigation works with Tab, Enter, Space, and Escape keys for accessibility."
+        },
+        {
+          "path": "frontend/src/data/navigationData.ts",
+          "operation": "create",
+          "description": "Create a TypeScript file exporting hardcoded demo navigation data structured as an array of Level 1 menu items. Each Level 1 item includes a label, optional link, and an array of Level 2 items. Each Level 2 item includes a label, optional link, and an array of Level 3 items. Populate with at least 3 Level 1 items, multiple Level 2 items per Level 1, and several Level 3 items nested under select Level 2 items to demonstrate the 3-level hierarchy."
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Collapse 3-level navigation into a hamburger menu on mobile/tablet with expandable/collapsible inline levels",
+      "acceptanceCriteria": [
+        "A hamburger icon appears in the header on screens narrower than the desktop breakpoint",
+        "Tapping the hamburger icon opens the mobile menu panel",
+        "Level 1 items are listed vertically; tapping one expands Level 2 items below it",
+        "Tapping a Level 2 item expands Level 3 items below it",
+        "A close button or second tap of the hamburger collapses the menu"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/Header.tsx",
+          "operation": "modify",
+          "description": "Add a hamburger menu icon visible only on mobile and tablet breakpoints (hidden on desktop). Manage mobile menu open/closed state using React state. When the hamburger icon is tapped, open a full-width vertical drawer or panel. Render Level 1 items vertically. Each Level 1 item is tappable to expand/collapse its Level 2 items inline below it. Each Level 2 item is tappable to expand/collapse its Level 3 items inline. Include a close button or allow tapping the hamburger again to collapse the menu. Use the same demo navigation data from frontend/src/data/navigationData.ts."
+        }
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "summary": "Apply a creative, modern visual theme with non-blue/non-purple color scheme, bold typography, smooth transitions, and clear hover/active states",
+      "acceptanceCriteria": [
+        "Header uses a visually distinct non-blue/non-purple color scheme consistently",
+        "Dropdown and flyout menus have smooth open/close transitions",
+        "Hover and active states are clearly visible for all nav items at all levels",
+        "Typography is bold and readable at all breakpoints"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Define global CSS custom properties or Tailwind utility extensions for a creative, modern theme using a rich dark or jewel-toned color palette (e.g., emerald, amber, teal, burgundy — not blue or purple). Ensure strong contrast for header background, text, and dropdown backgrounds. Set global typography to bold, modern fonts with clear hierarchy and readability at all breakpoints."
+        },
+        {
+          "path": "frontend/tailwind.config.js",
+          "operation": "modify",
+          "description": "Extend the Tailwind theme with custom colors matching the non-blue/non-purple palette (e.g., emerald, amber, teal, burgundy) and bold font families. Configure transition durations and easing for smooth dropdown/flyout animations. Add custom spacing/sizing utilities if needed for consistent header and menu spacing."
+        },
+        {
+          "path": "frontend/src/components/Header.tsx",
+          "operation": "modify",
+          "description": "Apply the custom theme colors and typography from Tailwind config to the Header, navigation items, dropdowns, and flyouts. Use Tailwind transition utilities (transition, duration, ease-in-out) for smooth open/close animations on Level 2 and Level 3 menus. Define clear hover and active state styles (e.g., background change, underline, scale) for all navigation items at all three levels using the custom color palette. Ensure all styles are consistent across desktop and mobile views."
+        }
+      ]
+    }
+  ]
+}

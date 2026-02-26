@@ -1,0 +1,58 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "React responsive header component with 3-level navigation menu, styled with Tailwind CSS, including hamburger menu for mobile.",
+  "architectural_notes": [
+    "Use React + Tailwind CSS for responsive header and navigation",
+    "3-level menu: main nav > sub-menu > sub-sub-menu with dropdown/flyout behavior",
+    "Mobile: hamburger menu toggle; Desktop: hover/click dropdowns"
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "existing_features": [
+    {
+      "id": "feature-create-a-full-width-responsive-header-component-that-spans-100-of-the-viewport-width-at-all-breakpoints-mobile-tablet-desktop-with-appropriate-padding-and-a-consistent-height",
+      "title": "Create a full-width responsive header component that spans 100% of the viewport width at all breakpoints (mobile, tablet, desktop), with appropriate padding and a consistent height.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-3-level-navigation-menu-in-the-header-for-desktop-views-level-1-items-appear-as-top-level-links-in-the-horizontal-nav-bar-hovering-a-level-1-item-reveals-a-level-2-dropdown-hovering-a-level-2-item-reveals-a-level-3-flyout-or-nested-sub-menu-use-sample-demo-menu-data-to-populate-all-three-levels",
+      "title": "Implement a 3-level navigation menu in the header for desktop views. Level 1 items appear as top-level links in the horizontal nav bar. Hovering a Level 1 item reveals a Level 2 dropdown. Hovering a Level 2 item reveals a Level 3 flyout or nested sub-menu. Use sample/demo menu data to populate all three levels.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-on-mobile-and-tablet-breakpoints-collapse-the-3-level-navigation-into-a-hamburger-menu-icon-tapping-the-icon-opens-a-full-width-drawer-or-accordion-style-vertical-menu-each-level-should-be-expandable-collapsible-via-tap-showing-all-three-menu-levels-inline",
+      "title": "On mobile and tablet breakpoints, collapse the 3-level navigation into a hamburger menu icon. Tapping the icon opens a full-width drawer or accordion-style vertical menu. Each level should be expandable/collapsible via tap, showing all three menu levels inline.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-apply-a-creative-coherent-visual-theme-to-the-header-and-navigation-menus-use-a-bold-modern-design-with-strong-typography-a-rich-dark-or-jewel-toned-color-palette-not-blue-or-purple-clear-hover-active-states-smooth-css-transitions-on-dropdowns-and-consistent-spacing-throughout",
+      "title": "Apply a creative, coherent visual theme to the header and navigation menus. Use a bold, modern design with strong typography, a rich dark or jewel-toned color palette (not blue or purple), clear hover/active states, smooth CSS transitions on dropdowns, and consistent spacing throughout.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Responsive header with 3-level navigation menu (desktop dropdowns + mobile hamburger menu)",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Nav Demo",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

@@ -1,0 +1,81 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-create-a-full-width-responsive-header-component-that-spans-100-of-the-viewport-width-at-all-breakpoints-mobile-tablet-desktop-with-appropriate-padding-and-a-consistent-height",
+      "featureTitle": "Create a full-width responsive header component that spans 100% of the viewport width at all breakpoints (mobile, tablet, desktop), with appropriate padding and a consistent height.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/Header.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-a-3-level-navigation-menu-in-the-header-for-desktop-views-level-1-items-appear-as-top-level-links-in-the-horizontal-nav-bar-hovering-a-level-1-item-reveals-a-level-2-dropdown-hovering-a-level-2-item-reveals-a-level-3-flyout-or-nested-sub-menu-use-sample-demo-menu-data-to-populate-all-three-levels",
+      "featureTitle": "Implement a 3-level navigation menu in the header for desktop views. Level 1 items appear as top-level links in the horizontal nav bar. Hovering a Level 1 item reveals a Level 2 dropdown. Hovering a Level 2 item reveals a Level 3 flyout or nested sub-menu. Use sample/demo menu data to populate all three levels.",
+      "files": [
+        "frontend/src/components/Header.tsx",
+        "frontend/src/data/navigationData.ts"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-on-mobile-and-tablet-breakpoints-collapse-the-3-level-navigation-into-a-hamburger-menu-icon-tapping-the-icon-opens-a-full-width-drawer-or-accordion-style-vertical-menu-each-level-should-be-expandable-collapsible-via-tap-showing-all-three-menu-levels-inline",
+      "featureTitle": "On mobile and tablet breakpoints, collapse the 3-level navigation into a hamburger menu icon. Tapping the icon opens a full-width drawer or accordion-style vertical menu. Each level should be expandable/collapsible via tap, showing all three menu levels inline.",
+      "files": [
+        "frontend/src/components/Header.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-3"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-apply-a-creative-coherent-visual-theme-to-the-header-and-navigation-menus-use-a-bold-modern-design-with-strong-typography-a-rich-dark-or-jewel-toned-color-palette-not-blue-or-purple-clear-hover-active-states-smooth-css-transitions-on-dropdowns-and-consistent-spacing-throughout",
+      "featureTitle": "Apply a creative, coherent visual theme to the header and navigation menus. Use a bold, modern design with strong typography, a rich dark or jewel-toned color palette (not blue or purple), clear hover/active states, smooth CSS transitions on dropdowns, and consistent spacing throughout.",
+      "files": [
+        "frontend/src/components/Header.tsx",
+        "frontend/src/index.css",
+        "frontend/tailwind.config.js"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-4"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

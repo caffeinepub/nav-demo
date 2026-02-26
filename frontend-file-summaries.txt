@@ -1,0 +1,7 @@
+{
+  "frontend/src/index.css": "Global styles with a forest green + warm amber OKLCH color palette, custom CSS variables for the header/dropdown/flyout layers, and animation keyframes for smooth menu transitions.",
+  "frontend/tailwind.config.js": "Extended Tailwind config with Inter/Playfair Display fonts, custom nav color tokens, nav shadow utility, and transition duration extensions.",
+  "frontend/src/data/navigationData.ts": "TypeScript data file exporting a fully typed 3-level navigation tree with 5 Level-1 items, multiple Level-2 sub-items with descriptions, and Level-3 sub-sub-items.",
+  "frontend/src/components/Header.tsx": "Full responsive header component with sticky positioning, desktop hover-based 3-level dropdown/flyout navigation, and a mobile hamburger accordion menu with all three levels expandable inline.",
+  "frontend/src/App.tsx": "Main app component rendering the Header, hero section, features grid, interaction instructions, and footer — with `ChevronRight` now properly imported from lucide-react."
+}

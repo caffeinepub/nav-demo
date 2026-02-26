@@ -1,0 +1,16 @@
+{
+  "backend/main.mo": "Empty Motoko actor serving as the backend entry point with no implemented methods.",
+  "feature_evidence.json": "Feature evidence report mapping four navigation/header features to their implementing source files, components, test IDs, and confidence levels.",
+  "frontend-file-summaries.txt": "JSON document containing one-line summaries of each frontend source file for build planning reference.",
+  "frontend/index.css": "Tailwind base stylesheet defining OKLCH-based CSS custom properties for light and dark theme tokens including colors, borders, and sidebar variables.",
+  "frontend/index.html": "Minimal HTML entry point that mounts the React app into a root div and loads the main TypeScript module.",
+  "frontend/src/App.tsx": "Main app component composing the Header, a hero section, a feature cards grid, interaction instructions, and a footer using a dark forest-green theme.",
+  "frontend/src/components/Header.tsx": "Full-width sticky header component implementing desktop hover-driven 3-level dropdown/flyout navigation and a mobile hamburger accordion menu with all three levels expandable inline.",
+  "frontend/src/data/navigationData.ts": "TypeScript file exporting typed interfaces and a 3-level navigation tree with five Level-1 items, multiple Level-2 sub-items with descriptions, and Level-3 sub-sub-items.",
+  "frontend/src/hooks/useActor.ts": "Custom React hook that creates and caches an ICP backend actor via React Query, supporting both anonymous and authenticated (Internet Identity) usage and invalidating dependent queries when the actor changes.",
+  "frontend/src/hooks/useInternetIdentity.ts": "Provides a React context and hook for Internet Identity authentication on ICP, managing login/logout state, identity persistence, and AuthClient lifecycle.",
+  "frontend/src/index.css": "Global stylesheet importing Google Fonts and Tailwind CSS, defining OKLCH-based CSS custom properties for light/dark themes and custom nav header styles.",
+  "frontend/src/main.tsx": "React app entry point that mounts the root component wrapped with QueryClientProvider and InternetIdentityProvider.",
+  "frontend/tailwind.config.js": "Tailwind CSS configuration extending the default theme with custom OKLCH color tokens, typography/display fonts, border radii, shadows, and plugins for typography, container queries, and animations.",
+  "project_state.json": "Project state metadata describing a Nav Demo app with a responsive 3-level navigation header (desktop dropdowns + mobile hamburger), tracking implemented features and pending work items."
+}
